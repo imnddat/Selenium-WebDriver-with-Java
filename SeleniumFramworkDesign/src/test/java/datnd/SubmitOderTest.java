@@ -12,6 +12,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import datnd.pageobjects.CartPage;
+import datnd.pageobjects.CheckoutPage;
+import datnd.pageobjects.ConfirmationPage;
 import datnd.pageobjects.LandingPage;
 import datnd.pageobjects.ProductCatalogue;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -20,47 +23,32 @@ public class SubmitOderTest {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
+		
 		String productName = "ZARA COAT 3";
-
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		
+
 		LandingPage landingPage = new LandingPage(driver);
 		landingPage.goTo();
-		landingPage.LoginApplication("nguyenducdatgl@gmail.com", "Datnd2109@");
-		
-		ProductCatalogue productCatalogue = new ProductCatalogue(driver);
-		List<WebElement> products =  productCatalogue.getProductList();
-		
+		ProductCatalogue productCatalogue = landingPage.LoginApplication("nguyenducdatgl@gmail.com", "Datnd2109@");
+
+		List<WebElement> products = productCatalogue.getProductList();
 		productCatalogue.addProductToCart(productName);
-		
-		
+		CartPage cartPage = productCatalogue.goToCartPage();
 
-		driver.findElement(By.cssSelector("[routerlink*='cart']")).click();
-
-		List<WebElement> cartProducts = driver.findElements(By.cssSelector(".cartSection h3"));
-		Boolean match = cartProducts.stream()
-				.anyMatch(cartProduct -> cartProduct.getText().equalsIgnoreCase(productName));
-		
+		Boolean match = cartPage.VerifyProductDisplay(productName);
 		Assert.assertTrue(match);
-		
-		driver.findElement(By.cssSelector(".totalRow button")).click();
-		
-		Actions a = new Actions(driver);
-		a.sendKeys(driver.findElement(By.cssSelector("[placeholder='Select Country']")), "india").build().perform();
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".ta-results")));
-		
-		driver.findElement(By.xpath("(//button[contains(@class, 'ta-item')])[2]")).click();
-		
-		driver.findElement(By.cssSelector(".action__submit")).click();
-		
-		String confirmMessage = driver.findElement(By.cssSelector(".hero-primary")).getText();
+
+		CheckoutPage checkoutPage = cartPage.goToCheckout();
+		checkoutPage.selectCountry("india");
+
+		ConfirmationPage confirmationPage = checkoutPage.submitOrder();
+		String confirmMessage = confirmationPage.getConfirmationMessage();
 		Assert.assertTrue(confirmMessage.equalsIgnoreCase("Thankyou for the order."));
-		
+
 		driver.close();
 	}
 

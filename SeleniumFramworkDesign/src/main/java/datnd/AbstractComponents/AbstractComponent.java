@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import datnd.pageobjects.CartPage;
+
 public class AbstractComponent {
 	
 	WebDriver driver;
@@ -27,8 +29,10 @@ public class AbstractComponent {
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 	
-	public void goToCartPage() {
+	public CartPage goToCartPage() {
 		cartHeader.click();
+		CartPage cartPage = new CartPage(driver);
+		return cartPage;
 	}
 	
 	public void waitForElementToDisappear(WebElement ele) throws InterruptedException {
