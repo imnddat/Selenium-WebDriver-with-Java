@@ -1,10 +1,12 @@
 package datnd.tests;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import datnd.TestComponents.BaseTest;
@@ -18,15 +20,15 @@ public class SubmitOderTest extends BaseTest {
 
 	String productName = "ZARA COAT 3";
 
-	@Test
-	public void submitOrder() throws IOException, InterruptedException {
+	@Test(dataProvider = "getData", groups = { "Purchase" })
+	public void submitOrder(HashMap<String, String> input) throws IOException, InterruptedException {
 
-		ProductCatalogue productCatalogue = landingPage.LoginApplication("nguyenducdatgl@gmail.com", "Datnd2109@");
+		ProductCatalogue productCatalogue = landingPage.LoginApplication(input.get("email"), input.get("password"));
 		List<WebElement> products = productCatalogue.getProductList();
-		productCatalogue.addProductToCart(productName);
+		productCatalogue.addProductToCart(input.get("product"));
 		CartPage cartPage = productCatalogue.goToCartPage();
 
-		Boolean match = cartPage.VerifyProductDisplay(productName);
+		Boolean match = cartPage.VerifyProductDisplay(input.get("product"));
 		Assert.assertTrue(match);
 
 		CheckoutPage checkoutPage = cartPage.goToCheckout();
@@ -42,9 +44,30 @@ public class SubmitOderTest extends BaseTest {
 	public void OrderHistoryTest() {
 		ProductCatalogue productCatalogue = landingPage.LoginApplication("nguyenducdatgl@gmail.com", "Datnd2109@");
 		OrderPage orderPage = productCatalogue.goToOrdersPage();
-
 		Assert.assertTrue(orderPage.VerifyOrderDisplay(productName));
-
 	}
+
+	@DataProvider
+	public Object[][] getData() {
+
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put("email", "nguyenducdatgl@gmail.com");
+		map.put("password", "Datnd2109@");
+		map.put("product", "ZARA COAT 3");
+
+		HashMap<String, String> map1 = new HashMap<String, String>();
+		map1.put("email", "datndhe161899@fpt.edu.vn");
+		map1.put("password", "Datnd2109@");
+		map1.put("product", "ADIDAS ORIGINAL");
+
+		return new Object[][] { { map }, { map1 } };
+	}
+
+//	@DataProvider
+//	public Object[][] getData() {
+//
+//		return new Object[][] { { "nguyenducdatgl@gmail.com", "Datnd2109@", "ZARA COAT 3" },
+//				{ "datndhe161899@fpt.edu.vn", "Datnd2109@", "ADIDAS ORIGINAL" } };
+//	}
 
 }
