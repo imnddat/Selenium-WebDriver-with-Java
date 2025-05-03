@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import datnd.pageobjects.CartPage;
+import datnd.pageobjects.OrderPage;
 
 public class AbstractComponent {
 	
@@ -23,16 +24,30 @@ public class AbstractComponent {
 	
 	@FindBy(css = "[routerlink*='cart']")
 	WebElement cartHeader;
+	
+	@FindBy(css = "[routerlink*='myorders']")
+	WebElement orderHeader;
 
 	public void waitForElementToAppear(By findBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 	
+	public void waitForWebElementToAppear(WebElement Ele) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait.until(ExpectedConditions.invisibilityOf(Ele));
+	}
+	
 	public CartPage goToCartPage() {
 		cartHeader.click();
 		CartPage cartPage = new CartPage(driver);
 		return cartPage;
+	}
+	
+	public OrderPage goToOrdersPage() {
+		orderHeader.click();
+		OrderPage orderPage = new OrderPage(driver);
+		return orderPage;
 	}
 	
 	public void waitForElementToDisappear(WebElement ele) throws InterruptedException {

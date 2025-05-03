@@ -1,4 +1,4 @@
-package datnd;
+package datnd.tests;
 
 import java.time.Duration;
 import java.util.List;
