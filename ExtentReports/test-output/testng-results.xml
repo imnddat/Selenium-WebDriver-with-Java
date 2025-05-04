@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-05-04T18:51:12 ICT" name="Default suite" finished-at="2025-05-04T18:51:15 ICT" duration-ms="3580">
+    <groups>
+    </groups>
+    <test started-at="2025-05-04T18:51:12 ICT" name="Default test" finished-at="2025-05-04T18:51:15 ICT" duration-ms="3580">
+      <class name="datnd.ExtentReports.ExtentReportDemo">
+        <test-method is-config="true" signature="config()[pri:0, instance:datnd.ExtentReports.ExtentReportDemo@34e9fd99]" started-at="2025-05-04T18:51:12 ICT" name="config" finished-at="2025-05-04T18:51:12 ICT" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- config -->
+        <test-method signature="initialDemo()[pri:0, instance:datnd.ExtentReports.ExtentReportDemo@34e9fd99]" started-at="2025-05-04T18:51:12 ICT" name="initialDemo" finished-at="2025-05-04T18:51:15 ICT" duration-ms="3385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialDemo -->
+      </class> <!-- datnd.ExtentReports.ExtentReportDemo -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
