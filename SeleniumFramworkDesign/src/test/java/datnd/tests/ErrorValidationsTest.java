@@ -9,12 +9,13 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import datnd.TestComponents.BaseTest;
+import datnd.TestComponents.Retry;
 import datnd.pageobjects.CartPage;
 import datnd.pageobjects.ProductCatalogue;
 
 public class ErrorValidationsTest extends BaseTest {
 
-	@Test(groups = {"ErrorHandling"})
+	@Test(groups = {"ErrorHandling"}, retryAnalyzer = Retry.class)
 	public void LoginErrorValidation() throws IOException, InterruptedException {
 
 		String productName = "ZARA COAT 3";
