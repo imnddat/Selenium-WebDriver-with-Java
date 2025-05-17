@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="1" ignored="1" total="7" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-05T14:06:30 ICT" name="Suite" finished-at="2025-05-05T14:07:22 ICT" duration-ms="52091">
+  <suite started-at="2025-05-17T17:34:29 ICT" name="Suite" finished-at="2025-05-17T17:34:43 ICT" duration-ms="13811">
     <groups>
-      <group name="ErrorHandling">
-        <method signature="ErrorValidationsTest.LoginErrorValidation()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" name="LoginErrorValidation" class="datnd.tests.ErrorValidationsTest"/>
-      </group> <!-- ErrorHandling -->
       <group name="Purchase">
-        <method signature="SubmitOderTest.submitOrder(java.util.HashMap)[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" name="submitOrder" class="datnd.tests.SubmitOderTest"/>
+        <method signature="SubmitOderTest.submitOrder(java.util.HashMap)[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" name="submitOrder" class="datnd.tests.SubmitOderTest"/>
       </group> <!-- Purchase -->
     </groups>
-    <test started-at="2025-05-05T14:06:30 ICT" name="Submit Order Test" finished-at="2025-05-05T14:07:16 ICT" duration-ms="45527">
+    <test started-at="2025-05-17T17:34:29 ICT" name="Error Validations Test" finished-at="2025-05-17T17:34:29 ICT" duration-ms="9">
+    </test> <!-- Error Validations Test -->
+    <test started-at="2025-05-17T17:34:29 ICT" name="Submit Order Test" finished-at="2025-05-17T17:34:43 ICT" duration-ms="13811">
       <class name="datnd.tests.SubmitOderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:30 ICT" name="launchApplication" finished-at="2025-05-05T14:06:38 ICT" duration-ms="8250" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" started-at="2025-05-17T17:34:29 ICT" name="launchApplication" finished-at="2025-05-17T17:34:33 ICT" duration-ms="3624" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:38 ICT" name="submitOrder" data-provider="getData" finished-at="2025-05-05T14:06:42 ICT" duration-ms="3178" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" started-at="2025-05-17T17:34:33 ICT" name="submitOrder" data-provider="getData" finished-at="2025-05-17T17:34:36 ICT" duration-ms="3146" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -28,15 +27,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:42 ICT" name="tearDown" finished-at="2025-05-05T14:06:42 ICT" duration-ms="51" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" started-at="2025-05-17T17:34:36 ICT" name="tearDown" finished-at="2025-05-17T17:34:36 ICT" duration-ms="72" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:42 ICT" name="launchApplication" finished-at="2025-05-05T14:06:48 ICT" duration-ms="6063" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" started-at="2025-05-17T17:34:36 ICT" name="launchApplication" finished-at="2025-05-17T17:34:40 ICT" duration-ms="3575" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:48 ICT" name="submitOrder" data-provider="getData" finished-at="2025-05-05T14:06:51 ICT" duration-ms="3105" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" started-at="2025-05-17T17:34:40 ICT" name="submitOrder" data-provider="getData" finished-at="2025-05-17T17:34:43 ICT" duration-ms="3174" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,135 +46,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:51 ICT" name="tearDown" finished-at="2025-05-05T14:06:51 ICT" duration-ms="82" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:06:51 ICT" name="launchApplication" finished-at="2025-05-05T14:07:15 ICT" duration-ms="23567" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="OrderHistoryTest()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:07:15 ICT" name="OrderHistoryTest" finished-at="2025-05-05T14:07:15 ICT" depends-on-methods="datnd.tests.SubmitOderTest.submitOrder" duration-ms="946" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OrderHistoryTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.SubmitOderTest@60db1c0e]" started-at="2025-05-05T14:07:15 ICT" name="tearDown" finished-at="2025-05-05T14:07:16 ICT" duration-ms="75" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.SubmitOderTest@815b41f]" started-at="2025-05-17T17:34:43 ICT" name="tearDown" finished-at="2025-05-17T17:34:43 ICT" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- datnd.tests.SubmitOderTest -->
     </test> <!-- Submit Order Test -->
-    <test started-at="2025-05-05T14:06:30 ICT" name="Error Validations Test" finished-at="2025-05-05T14:07:22 ICT" duration-ms="52091">
-      <class name="datnd.tests.ErrorValidationsTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:30 ICT" name="launchApplication" finished-at="2025-05-05T14:06:44 ICT" duration-ms="13838" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method retried="true" signature="LoginErrorValidation()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:44 ICT" name="LoginErrorValidation" finished-at="2025-05-05T14:06:44 ICT" duration-ms="393" status="SKIP">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Incorrect email or pass@@word.] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Incorrect email or pass@@word.] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at datnd.tests.ErrorValidationsTest.LoginErrorValidation(ErrorValidationsTest.java:24)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:44 ICT" name="tearDown" finished-at="2025-05-05T14:06:44 ICT" duration-ms="74" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:44 ICT" name="launchApplication" finished-at="2025-05-05T14:06:55 ICT" duration-ms="10832" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="LoginErrorValidation()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:55 ICT" name="LoginErrorValidation" finished-at="2025-05-05T14:06:56 ICT" duration-ms="402" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [Incorrect email or pass@@word.] but found []]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [Incorrect email or pass@@word.] but found []
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at datnd.tests.ErrorValidationsTest.LoginErrorValidation(ErrorValidationsTest.java:24)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:56 ICT" name="tearDown" finished-at="2025-05-05T14:06:56 ICT" duration-ms="38" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:06:56 ICT" name="launchApplication" finished-at="2025-05-05T14:07:19 ICT" duration-ms="23398" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="ProductErrorValidation()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:07:19 ICT" name="ProductErrorValidation" finished-at="2025-05-05T14:07:22 ICT" duration-ms="2575" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ProductErrorValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:datnd.tests.ErrorValidationsTest@2205a05d]" started-at="2025-05-05T14:07:22 ICT" name="tearDown" finished-at="2025-05-05T14:07:22 ICT" duration-ms="83" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- datnd.tests.ErrorValidationsTest -->
-    </test> <!-- Error Validations Test -->
   </suite> <!-- Suite -->
 </testng-results>

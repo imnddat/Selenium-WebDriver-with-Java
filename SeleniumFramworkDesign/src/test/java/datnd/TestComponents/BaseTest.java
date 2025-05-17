@@ -35,7 +35,9 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(
 				"E:\\automation_test\\Selenium-WebDriver-with-Java\\SeleniumFramworkDesign\\src\\main\\java\\datnd\\resources\\GlobalData.properties");
 		prop.load(fis);
-		String browserName = prop.getProperty("browser");
+
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
+				: prop.getProperty("browser");
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -66,7 +68,7 @@ public class BaseTest {
 		// {map, map}
 		return data;
 	}
-	
+
 	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		File source = ts.getScreenshotAs(OutputType.FILE);
